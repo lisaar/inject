@@ -9,6 +9,12 @@ To avoid rspec test fails this new method will be names injection.
 
 
 ###This is how the inject method works
+Combines all elements of enum by applying a binary operation, specified by a block or a symbol that names a method or operator.
+
+If you specify a block, then for each element in enum the block is passed an accumulator value (memo) and the element. If you specify a symbol instead, then each element in the collection will be passed to the named method of memo. In either case, the result becomes the new value for memo. At the end of the iteration, the final value of memo is the return value for the method.
+
+If you do not explicitly specify an initial value for memo, then the first element of collection is used as the initial value of memo.	
+	
 	inject(initial, sym) → obj 
 
 	inject(sym) → obj
@@ -17,11 +23,7 @@ To avoid rspec test fails this new method will be names injection.
 
 	inject { |memo, obj| block } → obj
 
-Combines all elements of enum by applying a binary operation, specified by a block or a symbol that names a method or operator.
 
-If you specify a block, then for each element in enum the block is passed an accumulator value (memo) and the element. If you specify a symbol instead, then each element in the collection will be passed to the named method of memo. In either case, the result becomes the new value for memo. At the end of the iteration, the final value of memo is the return value for the method.
-
-If you do not explicitly specify an initial value for memo, then the first element of collection is used as the initial value of memo.
 
 
 Sum some numbers
