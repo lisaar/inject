@@ -1,14 +1,15 @@
 #Injection - rewriting inject
 
-``````
+
 The challenge set was to rewrite the inject method.
 This will be test driven.
 It will assume that inject is only an Array class method, as opposed to an Enumerator method.
 To avoid rspec test fails this new method will be names injection.
-``````
+
 
 
 ###This is how the inject method works
+``````
 Combines all elements of enum by applying a binary operation, specified by a block or a symbol that names a method or operator.
 
 If you specify a block, then for each element in enum the block is passed an accumulator value (memo) and the element. If you specify a symbol instead, then each element in the collection will be passed to the named method of memo. In either case, the result becomes the new value for memo. At the end of the iteration, the final value of memo is the return value for the method.
@@ -48,3 +49,4 @@ Find the longest word
 	   memo.length > word.length ? memo : word
 	end
 	longest                                        #=> "sheep"
+``````
