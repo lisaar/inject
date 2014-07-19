@@ -9,13 +9,13 @@ To avoid rspec test fails this new method will be names injection.
 
 
 ###This is how the inject method works
-Inject(initial, sym) → obj 
+	inject(initial, sym) → obj 
 
-inject(sym) → obj
+	inject(sym) → obj
 
-inject(initial) { |memo, obj| block } → obj
+	inject(initial) { |memo, obj| block } → obj
 
-inject { |memo, obj| block } → obj
+	inject { |memo, obj| block } → obj
 
 Combines all elements of enum by applying a binary operation, specified by a block or a symbol that names a method or operator.
 
